@@ -84,7 +84,7 @@ module.exports = function (RED) {
     };
 
     // Main function called by Node-RED    
-    function AzureEventHubNode(config) {
+    function AzureEventHubSendOnlyNode(config) {
         // Store node for further use
         var node = this;
         backupnode = node;
@@ -117,7 +117,7 @@ module.exports = function (RED) {
     }
 
     // Registration of the node into Node-RED
-    RED.nodes.registerType("azureeventhubsendonly", AzureEventHubNode, {
+    RED.nodes.registerType("azureeventhubsendonly", AzureEventHubSendOnlyNode, {
         defaults: {
             name: { value: "Azure Event Hub Send Only" }
         }
