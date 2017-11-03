@@ -1,15 +1,15 @@
 <script type="text/javascript">
-    RED.nodes.registerType('azureeventhubsendonly',{
+    RED.nodes.registerType('azureeventhub2',{
         category: 'cloud',
         color: '#00abec',
         defaults: {
-            name: {value:"Azure Event Hub Send Only"}
+            name: {value:"Azure Event Hub"}
         },
         inputs:1,
-        outputs:0,
+        outputs:1,
         icon: "azureeh.png",
         label: function() {
-            return this.name||"Azure Event Hub Send Only";
+            return this.name||"Azure Event Hub";
         },
         credentials: {
             connectionString: {type:"text"},
@@ -18,13 +18,13 @@
     });
 </script>
 
-<script type="text/x-red" data-template-name="azureeventhubsendonly">
+<script type="text/x-red" data-template-name="azureeventhub2">
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
 </script>
 
-<script type="text/x-red" data-help-name="azureeventhubsendonly">
-    <p>A simple node that sends the message payloads to an Azure Event Hub</p>
+<script type="text/x-red" data-help-name="azureeventhub2">
+    <p>A simple node that sends the message payloads to Azure Event Hub</p>
 </script>
