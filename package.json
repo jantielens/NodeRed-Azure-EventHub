@@ -18,7 +18,7 @@
   ],
   "node-red": {
     "nodes": {
-      "Azure": "azureeventhubsendonly.js"
+      "Azure": "azureeventhub2.js"
     }
   },
   "repository": {
@@ -30,7 +30,7 @@
     "url": "https://github.com/lcarli/NodeRed-Azure-EventHub/issues"
   },
   "homepage": "https://github.com/lcarli/NodeRed-Azure-EventHub#readme",
-  "main": "azureeventhubsendonly.js",
+  "main": "azureeventhub2.js",
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
