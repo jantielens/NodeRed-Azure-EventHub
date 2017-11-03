@@ -50,11 +50,6 @@ module.exports = function (RED) {
          backupnode.log(err.message);
     };
 
-    var OutputEvent = function (ehEvent) {
-        backupnode.log('Event Received: ');
-        backupnode.send(ehEvent.body);
-    };
-
     var disconnectFromEventHub = function (node) {
         if (client) {
             node.log('Disconnecting from Azure Event Hub');
@@ -70,15 +65,15 @@ module.exports = function (RED) {
         client = EventHubClient.fromConnectionString(cs, path)
 
         client.open()
-            .then(client.getPartitionIds.bind(client))
-            .then(function (partitionIds) {
-                return Promise.map(partitionIds, function (partitionId) {
-                return client.createReceiver('$Default', partitionId, { 'startAfterTime' : receiveAfterTime}).then(function(receiver) {
-                    receiver.on('errorReceived', printError);
-                    receiver.on('message', OutputEvent);
-                });
-                });
-            })
+            // .then(client.getPartitionIds.bind(client))
+            // .then(function (partitionIds) {
+            //     return Promise.map(partitionIds, function (partitionId) {
+            //     return client.createReceiver('$Default', partitionId, { 'startAfterTime' : receiveAfterTime}).then(function(receiver) {
+            //         receiver.on('errorReceived', printError);
+            //         receiver.on('message', OutputEvent);
+            //     });
+            //     });
+            // })
             .then(function() {
                 return client.createSender();
             })
@@ -124,7 +119,7 @@ module.exports = function (RED) {
     // Registration of the node into Node-RED
     RED.nodes.registerType("azureeventhub", AzureEventHubNode, {
         defaults: {
-            name: { value: "Azure Event Hub" }
+            name: { value: "Azure Event Hub Send Only" }
         }
     });
 

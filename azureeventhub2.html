@@ -3,13 +3,13 @@
         category: 'cloud',
         color: '#00abec',
         defaults: {
-            name: {value:"Azure Event Hub"}
+            name: {value:"Azure Event Hub Send Only"}
         },
         inputs:1,
-        outputs:1,
+        outputs:0,
         icon: "azureeh.png",
         label: function() {
-            return this.name||"Azure Event Hub";
+            return this.name||"Azure Event Hub Send Only";
         },
         credentials: {
             connectionString: {type:"text"},

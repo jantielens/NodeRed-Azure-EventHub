@@ -23,13 +23,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lcarli/NodeRed-Azure-EventHub.git"
+    "url": "git+https://github.com/jantielens/NodeRed-Azure-EventHub-SendOnly"
   },
-  "author": "Lucas Humenhuk <luhumenh@microsoft.com> (http://nodered.org)",
+  "author": "Jan Tielens",
   "bugs": {
-    "url": "https://github.com/lcarli/NodeRed-Azure-EventHub/issues"
+    "url": "https://github.com/jantielens/NodeRed-Azure-EventHub-SendOnly/issues"
   },
-  "homepage": "https://github.com/lcarli/NodeRed-Azure-EventHub#readme",
+  "homepage": "https://github.com/jantielens/NodeRed-Azure-EventHub-SendOnly",
   "main": "azureeventhub2.js",
   "devDependencies": {},
   "scripts": {
