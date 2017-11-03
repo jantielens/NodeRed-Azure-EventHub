@@ -117,7 +117,7 @@ module.exports = function (RED) {
     }
 
     // Registration of the node into Node-RED
-    RED.nodes.registerType("azureeventhub", AzureEventHubNode, {
+    RED.nodes.registerType("azureeventhubsendonly", AzureEventHubNode, {
         defaults: {
             name: { value: "Azure Event Hub Send Only" }
         }
